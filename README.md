@@ -92,7 +92,7 @@ O metodo para calcular a rota pode ser testado da seguinte forma.
 
 Ex: curl -X POST -d '{"fuel": "2.50", "origin": "A", "destination": "D","autonomy": "10", "map": "SP"}'  -H "Content-Type: application/json" http://localhost:7000/delivery/routes/price_route/
 
-Ou com outro client para fazer requisições via poste, baste que o load data seja como este.
+Ou com outro client para fazer requisições via post, baste que o load data seja como este.
 
 
 ### TESTES
