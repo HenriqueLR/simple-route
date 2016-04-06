@@ -54,7 +54,7 @@ Para continuar o deploy e usar o nginx para produção.
     este arquivo dentro de /etc/supervisor/supervisord.conf
     *lembre de salvar o original.
 
-6 - Vamos iciar o supervisord 
+6 - Vamos iniciar o supervisord 
 	
 	sudo supervisord -c /mypath/supervisord.conf
 
@@ -86,9 +86,13 @@ Pronto, podemos rodar tanto para produção, ou desenvolvimento com esses passos
 
 Todos os metodos tem uma interface com as instruções e caracteristicas, com exeção do calcular a rota.
 
-Este somente usando o curl para teste.
+Ex: abrir diretamente no navegador http://localhost/delivery/maps/list 
+
+O metodo para calcular a rota pode ser testado da seguinte forma.
 
 Ex: curl -X POST -d '{"fuel": "2.50", "origin": "A", "destination": "D","autonomy": "10", "map": "SP"}'  -H "Content-Type: application/json" http://localhost:7000/delivery/routes/price_route/
+
+Ou com outro client para fazer requisições via poste, baste que o load data seja como este.
 
 
 ### TESTES
