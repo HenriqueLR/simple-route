@@ -1,6 +1,5 @@
 #encoding: utf-8
 
-
 from django.db import models
 
 
@@ -45,10 +44,10 @@ class Routes(models.Model):
 	id_map = models.ForeignKey(Maps, verbose_name=u'Cod Map', related_name='route_map', on_delete=models.PROTECT)
 
 	def __unicode__(self):
-		return u'%s' % self.name_map
+		return u'%s %s %s' % (self.origin_route, self.destination_route, self.distance_route)
 
 	def get_short_name(self):
-		return self.name_map
+		return self.id_route
 
 	def get_full_name(self):
 		return str(self)
@@ -57,4 +56,5 @@ class Routes(models.Model):
 		verbose_name=u'route'
 		verbose_name_plural=u'routes'
 		ordering=['id_route']
+		unique_together = ('origin_route', 'destination_route', 'id_map')
 		db_table='routes'
