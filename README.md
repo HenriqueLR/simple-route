@@ -45,8 +45,11 @@ observações: Com o aumento da utilização do servidor, se faz necessário uti
 Até aqui no passo 4, ja podemos testar o projeto, com as ferramentas sitadas de desenvolvimento.
 
 4 - Rodar localmente para desenvolvimento 
+
 	make database
+	
 	make migrate
+	
 	make run
 
 Para continuar o deploy e usar o nginx para produção.
