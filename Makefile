@@ -1,3 +1,5 @@
+all: test
+
 clean:
 	@find . -name "*.pyc" | xargs rm -f
 
@@ -14,3 +16,6 @@ run: clean
 
 install:
 	pip install -r requirements.txt
+
+test: clean
+	./runtests	
