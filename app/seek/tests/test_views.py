@@ -32,4 +32,4 @@ class TestApi(TestCase):
 		response = self.client.post('/delivery/routes/price_route/', 
 										json.dumps(pay),'json')
 
-		self.assertEqual(response.status_code, 201)
+		self.assertEqual(response.status_code, 200)

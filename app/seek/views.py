@@ -128,6 +128,6 @@ def price_route(request):
 			routes = route_price['routes']
 			price = (distance / autonomy) * fuel
 			result = {'routes': routes, 'distance': distance, 'price': price}
-			return HttpResponse(json.dumps(result), content_type='application/json',status=201)
+			return HttpResponse(json.dumps(result), content_type='application/json',status=200)
 		error = {"error":"Mapa pesquisado nao existe."}	
 		return HttpResponse(json.dumps(error), content_type='application/json')
