@@ -151,7 +151,7 @@ Pronto, podemos rodar tanto para produção, ou desenvolvimento com esses passos
 
 Todos os metodos tem uma interface com as instruções e caracteristicas, com exeção do calcular a rota.
 
-Ex: abrir diretamente no navegador http://localhost/delivery/maps/list
+Ex: abrir diretamente no navegador http://localhost:7000/delivery/maps/list
 
 O metodo para calcular a rota pode ser testado da seguinte forma.
 
