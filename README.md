@@ -162,7 +162,7 @@ Ou com outro client para fazer requisições via post, baste que o load data sej
 
     É possivel cadastrar via insterface de admin.
     http://localhost:7000/admin
-    credenciais foram ciradas durante o deploy.
+    credenciais foram criadas durante o deploy.
 
 
 ### TESTES
