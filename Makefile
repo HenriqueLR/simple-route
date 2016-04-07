@@ -4,7 +4,6 @@ clean:
 	@find . -name "*.pyc" | xargs rm -f
 
 database:
-	app/manage.py migrate
 	app/manage.py syncdb
 
 migrate:
