@@ -6,9 +6,6 @@ from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.decorators import api_view
-from django.http import JsonResponse
-from django.core import serializers
 from django.http import HttpResponse
 import json
 from seek.utils import RoutePrice
@@ -21,7 +18,7 @@ class MapsList(APIView):
     def get(self, request, format=None):
         maps = Maps.objects.all()
         serializer = MapsSerializer(maps, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK) 
 
     def post(self, request, format=None):
         maps = MapsSerializer(data=request.data)
@@ -105,12 +102,12 @@ class RoutesCustomName(APIView):
 		name = self.get_object(pk)
 		name.delete()
 		return Response(status=status.HTTP_204_NO_CONTENT)
-
+ 
 
 
 def price_route(request):
 	"""
-	List all snippets, or create a new snippet.
+	Get route information.
 	"""
 	if request.method == 'POST':
 		received_json_data = json.loads(request.body)
@@ -131,6 +128,6 @@ def price_route(request):
 			routes = route_price['routes']
 			price = (distance / autonomy) * fuel
 			result = {'routes': routes, 'distance': distance, 'price': price}
-			return HttpResponse(json.dumps(result), content_type='application/json')
+			return HttpResponse(json.dumps(result), content_type='application/json',status=201)
 		error = {"error":"Mapa pesquisado nao existe."}	
 		return HttpResponse(json.dumps(error), content_type='application/json')
