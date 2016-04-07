@@ -74,13 +74,13 @@ Pronto, podemos rodar tanto para produção, ou desenvolvimento com esses passos
 |--------------------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | `/delivery/maps/list`          		           | GET    | Retorna todos os mapas e pontos.                                                                                           |
 | `/delivery/maps/list`            | POST    | Cria um novo mapa.                                                                           |
-| `/delivery/maps/SP`          		           | GET   | Detalha um mapa. mapa                                                                                                                      |
-| `/delivery/maps/SP`            | PUT | Altera um mpap.                                                                |
+| `/delivery/maps/SP`          		           | GET   | Detalha um mapa.                                                                                                                     |
+| `/delivery/maps/SP`            | PUT | Altera um map.                                                                |
 | `/delivery/maps/SP`                 | DELETE   | Apaga o mapa indicado.                                                                                    |
 | `/delivery/routes/list`           | GET | Lista as rotas.                                                                    |
 | `delivery/routes/list` 				           | POST    | Cria uma nova rota                                                                                        |
 | `/delivery/routes/4`                   | GET    | Detalha uma rota                                                                         |
-| `/delivery/routes/4`        | PUT   | Alera uma rota |
+| `/delivery/routes/4`        | PUT   | Altera uma rota |
 | `/delivery/routes/4`                      | DELETE | Remove a rota.                                                                                                      |
 | `/delivery/routes/price_route` | POST    | Calular a distancia entre as rotas e o preço que sera gasto de combustivel.           |
 
