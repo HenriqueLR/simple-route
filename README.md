@@ -75,29 +75,94 @@ Pronto, podemos rodar tanto para produção, ou desenvolvimento com esses passos
 |--------------------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | `/delivery/maps/list`          		           | GET    | Retorna todos os mapas e pontos.                                                                                           |
 | `/delivery/maps/list`            | POST    | Cria um novo mapa.                                                                           |
-| `/delivery/maps/SP`          		           | GET   | Detalha um mapa.                                                                                                                     |
-| `/delivery/maps/SP`            | PUT | Altera um map.                                                                |
-| `/delivery/maps/SP`                 | DELETE   | Apaga o mapa indicado.                                                                                    |
+| `/delivery/maps/nome`          		           | GET   | Detalha um mapa.                                                                                                                     |
+| `/delivery/maps/nome`            | PUT | Altera um map.                                                                |
+| `/delivery/maps/nome`                 | DELETE   | Apaga o mapa indicado.                                                                                    |
 | `/delivery/routes/list`           | GET | Lista as rotas.                                                                    |
 | `delivery/routes/list` 				           | POST    | Cria uma nova rota                                                                                        |
-| `/delivery/routes/4`                   | GET    | Detalha uma rota                                                                         |
-| `/delivery/routes/4`        | PUT   | Altera uma rota |
-| `/delivery/routes/4`                      | DELETE | Remove a rota.                                                                                                      |
+| `/delivery/routes/id`                   | GET    | Detalha uma rota                                                                         |
+| `/delivery/routes/id`        | PUT   | Altera uma rota |
+| `/delivery/routes/id`                      | DELETE | Remove a rota.                                                                                                      |
 | `/delivery/routes/price_route` | POST    | Calular a distancia entre as rotas e o preço que sera gasto de combustivel.           |
-
 
 
 ### Utilização
 
+    para cadastrar um mapa ex: POST
+        {
+            "name_map": "SP",
+            "description_map": "teste",
+            "route_map": []
+        }
+
+    para alterar um mapa ex: PUT
+        {
+            "name_map": "SP",
+            "description_map": "teste2",
+            "route_map": []
+        }
+
+    para deletar um mapa ex: DELETE
+        {
+            "name_map": "SP",
+            "description_map": "teste2",
+            "route_map": []
+        }
+
+    listar os mapas ex: GET
+        http://localhost:7000/delivery/maps/list/
+
+    listar mapa especifico: GET
+        http://localhost:7000/delivery/maps/SP/
+
+
+    para cadastrar uma rota ex: POST
+        {
+            "origin_route": "A",
+            "destination_route": "C",
+            "distance_route": "10",
+            "description_route": "teste",
+            "id_map": 2
+        }
+
+    para alterar uma rota ex: PUT
+        {
+            "origin_route": "A",
+            "destination_route": "C",
+            "distance_route": "10",
+            "description_route": "test2",
+            "id_map": 2
+        }
+
+    para deletar uma rota ex: DELETE
+        {
+            "origin_route": "A",
+            "destination_route": "C",
+            "distance_route": "10",
+            "description_route": "test2",
+            "id_map": 2
+        }
+
+    listar as rotas ex: GET
+        http://localhost:7000/delivery/routes/list/
+
+    listar rota especifica: GET
+        http://localhost:7000/delivery/routes/1/
+
 Todos os metodos tem uma interface com as instruções e caracteristicas, com exeção do calcular a rota.
 
-Ex: abrir diretamente no navegador http://localhost/delivery/maps/list 
+Ex: abrir diretamente no navegador http://localhost/delivery/maps/list
 
 O metodo para calcular a rota pode ser testado da seguinte forma.
 
 Ex: curl -X POST -d '{"fuel": "2.50", "origin": "A", "destination": "D","autonomy": "10", "map": "SP"}'  -H "Content-Type: application/json" http://localhost:7000/delivery/routes/price_route/
 
 Ou com outro client para fazer requisições via post, baste que o load data seja como este.
+
+
+    É possivel cadastrar via insterface de admin.
+    http://localhost:7000/admin
+    credenciais foram ciradas durante o deploy.
 
 
 ### TESTES
