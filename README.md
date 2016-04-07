@@ -29,17 +29,18 @@ observações: Com o aumento da utilização do servidor, se faz necessário uti
     e configura-lo, também criar uma virtualenv dentro do projeto.
 
     Lembrando que não considerei usar um dns, usei o endereço local para simular, o wsgi 
-    esta apontando para o settings_production que esta usando postgresql, então sera preciso
-    baixa-lo e configurar um usuário, caso crie um diferente de postgresql e sem senha, altere 
-    somente em settings_production as novas credencias.
+    esta apontando para o settings_production que esta usando postgresql. Então será preciso
+    baixar o postgresql e configurar um usuário, para faciltar crie o usuario com nome de 
+    postgres e sem senha, o database com nome de route, caso crie as credencias diferentes,
+    alterar o arquivo settings_production.py, dento de app/conf/.
 
-2 - entra na virtualenv
+2 - entrar na virtualenv
 
 	source /simple-route/walmart/bin/activate
 
-3 - make install
+3 - instalar as dependencias do projeto
 
-	ira instalar as dependencias do projeto.
+	make install
 
 
 Até aqui no passo 4, ja podemos testar o projeto, com as ferramentas sitadas de desenvolvimento.
@@ -102,3 +103,5 @@ Ou com outro client para fazer requisições via post, baste que o load data sej
 ### TESTES
 
 make test
+
+Lembre de dar permissão ao script runtests
