@@ -149,16 +149,12 @@ Pronto, podemos rodar tanto para produção, ou desenvolvimento com esses passos
     listar rota especifica: GET
         http://localhost:7000/delivery/routes/1/
 
-Todos os metodos tem uma interface com as instruções e caracteristicas, com exeção do calcular a rota.
+    calcular a rota ex: POST
+    	curl -X POST -d '{"fuel": "2.50", "origin": "A", "destination": "D","autonomy": "10", "map": "SP"}'  -H "Content-Type: application/json" http://localhost:7000/delivery/routes/price_route/
+
+Todos os metodos tem uma interface com as instruções e caracteristicas.
 
 Ex: abrir diretamente no navegador http://localhost:7000/delivery/maps/list
-
-O metodo para calcular a rota pode ser testado da seguinte forma.
-
-Ex: curl -X POST -d '{"fuel": "2.50", "origin": "A", "destination": "D","autonomy": "10", "map": "SP"}'  -H "Content-Type: application/json" http://localhost:7000/delivery/routes/price_route/
-
-Ou com outro client para fazer requisições via post, baste que o load data seja como este.
-
 
     É possivel cadastrar via insterface de admin.
     http://localhost:7000/admin
