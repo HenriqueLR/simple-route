@@ -4,7 +4,7 @@
 *.py[co]
 *.tmp
 *.swp
-*.sqlite
+*.sqlite3
 *.tmp
 *.log
 __pycache__
