@@ -15,6 +15,8 @@ Virtualenv para serparar os ambientes
 
 Python Versão 2.7
 
+Django 1.7
+
 O sistema operacional utilizado foi o ubuntu 32 bits, entretanto gostaria de usar o centos 64 bits, não foi possivel por limitações no ambiente que foi utilizado para desenvolvimento.
 
 observações: Com o aumento da utilização do servidor, se faz necessário utilizar outras ferramentas, como mongoDB para banco de dados,
